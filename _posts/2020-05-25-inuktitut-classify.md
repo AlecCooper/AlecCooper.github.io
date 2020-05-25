@@ -46,10 +46,13 @@ The inuktitut and english lines are marked with * and -, making them easy to par
 
 The process of breaking lines into tokens is a little more nuanced and tricky than the process of breaking the dataset into lines. At the moment an extremely naive tokenization is achieved by breaking tokens up at spaces and new lines. Tokens with non alphabetic characters are filtered out. Additionally, I chose to only use unique tokens and filter out non-unique tokens. Filtering out non-unique tokens decreases the size of the dataset greatly, which is important as this model will be trained on my laptop!  
 
-## One-Hot Vectors
+## Vectorization
 
-The next step, each token was turned into a one-hot vector by mapping each character’s ascii numeric representation to an index of a one-hot vector. Finally we can train!  
+The next step, each token was turned into a one-hot vector by mapping each character’s ascii numeric representation to an index of a one-hot vector. A sequence length of 10 was used, with padding added to the end of any shorter tokens. Finally we can train!  
 
-## Network Architecture  
+## Neural Network Architecture
 
+The following network architecture was designed and utilized:
+
+![network](https://raw.githubusercontent.com/AlecCooper/AlecCooper.github.io/master/assets/NN.png)
 
