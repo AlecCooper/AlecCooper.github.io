@@ -68,7 +68,7 @@ The ADAM optimizer is untilized to calculate gradients, along with a binary cros
 
 ![loss](https://raw.githubusercontent.com/AlecCooper/Inuktitut-Detect/master/Results/results.png?token=ABFU22E6WORKYPGK64KXMPS6YQR36)
 
-Intial results resulted in a BCE of around 0.15, with an accuracy of over 96% on the test set.  
+Initial results resulted in a Binary-Cross-Entropy Loss of around 0.15, with an accuracy of over 96% on the test set.  
 
 ## References
 [The UQAILAUT Project](https://www.inuktitutcomputing.ca/index.php)
