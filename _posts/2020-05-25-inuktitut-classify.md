@@ -71,8 +71,8 @@ The ADAM optimizer is untilized to calculate gradients, along with a binary cros
 Initial results resulted in a Binary-Cross-Entropy Loss of around 0.15, with an accuracy of over 96% on the test set.  
 
 ## References
-[The UQAILAUT Project](https://www.inuktitutcomputing.ca/index.php)
-[Wikipedia:Inuktitut](https://en.wikipedia.org/wiki/Inuktitut)
-[NN-SVG used to create Neural Network Diagram](https://alexlenail.me/NN-SVG/AlexNet.html)
+[The UQAILAUT Project](https://www.inuktitutcomputing.ca/index.php)  
+[Wikipedia:Inuktitut](https://en.wikipedia.org/wiki/Inuktitut)  
+[NN-SVG used to create Neural Network Diagram](https://alexlenail.me/NN-SVG/AlexNet.html)  
 
 
