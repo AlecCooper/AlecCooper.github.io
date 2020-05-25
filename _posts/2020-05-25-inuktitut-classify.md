@@ -46,6 +46,8 @@ The inuktitut and english lines are marked with * and -, making them easy to par
 
 The process of breaking lines into tokens is a little more nuanced and tricky than the process of breaking the dataset into lines. At the moment an extremely naive tokenization is achieved by breaking tokens up at spaces and new lines. Tokens with non alphabetic characters are filtered out. Additionally, I chose to only use unique tokens and filter out non-unique tokens. Filtering out non-unique tokens decreases the size of the dataset greatly, which is important as this model will be trained on my laptop!  
 
+Tokens that appeared in both datasets were filtered out. Tokens appearing in both datasets were most often names (since names do not get translated) of people or places. This filtering was found to improve BCE loss by almost 0.15.
+
 ## Vectorization
 
 The next step, each token was turned into a one-hot vector by mapping each character’s ascii numeric representation to an index of a one-hot vector. A sequence length of 10 was used, with padding added to the end of any shorter tokens. Finally we can train!  
@@ -54,5 +56,23 @@ The next step, each token was turned into a one-hot vector by mapping each chara
 
 The following network architecture was designed and utilized:
 
-![network](https://raw.githubusercontent.com/AlecCooper/AlecCooper.github.io/master/assets/NN.png)
+![network](https://raw.githubusercontent.com/AlecCooper/AlecCooper.github.io/master/assets/NN.png)  
+
+Relu activation layers are used between all network layers except the last fully connected layer and the flattening layer. A sigmoidal activation layer is used on the last fully connected layer.
+
+## Training  
+
+The ADAM optimizer is untilized to calculate gradients, along with a binary cross entropy loss function. 10000 tokiens were set aside as a testing set.  
+
+## Results
+
+![loss](https://raw.githubusercontent.com/AlecCooper/Inuktitut-Detect/master/Results/results.png?token=ABFU22E6WORKYPGK64KXMPS6YQR36)
+
+Intial results resulted in a BCE of around 0.15, with an accuracy of over 96% on the test set.  
+
+## References
+[The UQAILAUT Project](https://www.inuktitutcomputing.ca/index.php)
+[Wikipedia:Inuktitut](https://en.wikipedia.org/wiki/Inuktitut)
+[NN-SVG used to create Neural Network Diagram](https://alexlenail.me/NN-SVG/AlexNet.html)
+
 
