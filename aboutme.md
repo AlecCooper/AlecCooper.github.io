@@ -1,16 +1,10 @@
 ---
 layout: page
 title: About me
-subtitle: Why you'd want to go on a date with me
+subtitle: Physics grad with a keen interest in ML
 ---
 
-My name is Inigo Montoya. I have the following qualities:
+I received my bachelor’s of science in physics from the University of Waterloo in 2020. I have a keen interest in machine learning, in particular natural language processing and machine vision. I have developed a number of projects during and after my time at Waterloo which you can checkout on this site!
 
-- I rock a great mustache
-- I'm extremely loyal to my family
+Outside of academics I have an insatiable appetite for the outdoors. I am an avid runner (former member of UW varsity track and field team), hiker and rock climber.
 
-What else do you need?
-
-### my history
-
-To be honest, I'm having some trouble remembering right now, so why don't you just watch [my movie](https://en.wikipedia.org/wiki/The_Princess_Bride_%28film%29) and it will answer **all** your questions.
