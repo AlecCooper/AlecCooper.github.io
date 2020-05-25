@@ -14,7 +14,7 @@ author: Alexander Cooper (Alec)
 navbar-links:
   About Me: "aboutme"
   Projects:
-    - Beautiful Jekyll: "https://beautifuljekyll.com"
+    - Inuktitut-Detect: "https://beautifuljekyll.com"
   Home: "https://aleccooper.github.io/"
 
 # --- Logo --- #
