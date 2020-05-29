@@ -16,6 +16,7 @@ navbar-links:
   Projects:
     - Inuktitut-Detect: "https://aleccooper.github.io/2020-05-25-inuktitut-classify/"
     - Self-Learning-Monte-Carlo: "https://aleccooper.github.io/2020-04-20-Self-Learning-Monte-Carlo/"
+  Resume: https://aleccooper.github.io/Resume.pdf
   Home: "https://aleccooper.github.io/"
 
 # --- Logo --- #
