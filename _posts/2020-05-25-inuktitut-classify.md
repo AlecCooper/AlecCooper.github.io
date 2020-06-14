@@ -13,21 +13,21 @@ Parallel Corpus.
 Checkout the repo here: [Inuktitut-Detect](https://github.com/AlecCooper/Inuktitut-Detect)  
 
 ## A Brief Intro To Inuktitut
-Inuktitut is the language of Canada’s Inuit, the indigenous group whose traditional lands spread across the 
+Inuktitut is the language of the Inuit, the indigenous group whose traditional lands spread across the 
 cold and pristine area above the treeline of Labrador, Quebec, the Northwest Territories and Nunavut. 
 Inuktitut is a diverse language with a number of dialects across different regions. 
 There is a relatively low number of native Inuktitut speakers with just around 35000 
 individuals reporting it as their mother tongue.  
 
 The relatively small number of speakers, among other challenges has contributed to relatively few Inuktitut computing 
-resources being available. Research into inuktitut NLP is even sparser, with just a few papers 
+resources being available. Research into Inuktitut NLP is even sparser, with just a few papers 
 being written on the topic. (Although these papers are very interesting!)  
 
 My personal interest in Inuktitut NLP comes from a number of places. In the summer of 2019 I had the wonderful 
 opportunity of working in one of Frontier College’s indegenous summer literacy camps in the Inuit community of 
 Inukjuak. After camp, while doing some random googling about Inuktitut I stumbled upon 
 [The Nunavut Hansard Parallel Corpus](https://www.inuktitutcomputing.ca/NunavutHansard/info.php). 
-This english-inuktitut corpus seemed like a perfect dataset to base some rudimentary projects upon as a way of 
+This English-Inuktitut corpus seemed like a perfect dataset to base some rudimentary projects upon as a way of 
 learning more about natural language processing!  
 
 ## The Dataset  
@@ -40,17 +40,17 @@ pingajuannik uqalimaarniq maligaksanit 22.
 -----
 Third Reading of Bills 22.
 ~~~
-The inuktitut and english lines are marked with * and -, making them easy to parse into a set of inuktitut and english lines. 
+The Inuktitut and English lines are marked with * and -, making them easy to parse into a set of inuktitut and english lines. 
 
 ## Tokienization
 
-The process of breaking lines into tokens is a little more nuanced and tricky than the process of breaking the dataset into lines. At the moment an extremely naive tokenization is achieved by breaking tokens up at spaces and new lines. Tokens with non alphabetic characters are filtered out. Additionally, I chose to only use unique tokens and filter out non-unique tokens. Filtering out non-unique tokens decreases the size of the dataset greatly, which is important as this model will be trained on my laptop!  
+The process of breaking lines into tokens is a little more nuanced and tricky than the process of breaking the dataset into lines. At the moment an extremely naive tokenization is achieved by breaking tokens up at spaces and new lines. Tokens with non alphabetic characters are filtered out. Additionally, I chose to only use unique tokens and filter out non-unique tokens. Filtering out non-unique tokens decreases the size of the dataset, which is important as this model will be trained on my laptop!  
 
 Tokens that appeared in both datasets were filtered out. Tokens appearing in both datasets were most often names (since names do not get translated) of people or places. This filtering was found to improve BCE loss by almost 0.15.
 
 ## Vectorization
 
-The next step, each token was turned into a one-hot vector by mapping each character’s ascii numeric representation to an index of a one-hot vector. A sequence length of 10 was used, with padding added to the end of any shorter tokens. Finally we can train!  
+For the next step token was turned into a one-hot vector by mapping each character’s ascii numeric representation to the index of a one-hot vector. A sequence length of 10 was used, with padding added to the end of any shorter tokens. Finally we can train!  
 
 ## Neural Network Architecture
 
